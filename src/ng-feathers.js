@@ -34,7 +34,7 @@ angular
         $get: [
           function () {
             this.app = feathers()
-              .configure(feathers.hooks())
+              .configure(feathers.activateHooks())
 
             if (useSocket) {
               this.socket = io(endpoint, socketOpts)
